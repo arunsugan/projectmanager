@@ -3,11 +3,39 @@
 </nav>
 
 <div class="container">
-    <app-task-create></app-task-create>
+    <ul class="nav nav-pills nav-fill">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#projectTab">Add Project</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#taskTab">Add Task</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#userTab">Add User</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#viewTaskTab">View Task</a>
+        </li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade active show" id="projectTab">
+            <app-project-create></app-project-create>
+
+        </div>
+        <div class="tab-pane fade" id="taskTab">
+            <app-task-create></app-task-create>
+        </div>
+        <div class="tab-pane fade" id="userTab">
+            <app-user-create></app-user-create>
+        </div>
+        <div class="tab-pane fade" id="viewTaskTab">
+            <app-task-view></app-task-view>
+        </div>
+    </div>
 </div>
 
 <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
-        <div class="container text-center">
-          <small>Created By - Arunkumar Rajan</small>
-        </div>
+    <div class="container text-center">
+        <small>Created By - Arunkumar Rajan</small>
+    </div>
 </footer>
