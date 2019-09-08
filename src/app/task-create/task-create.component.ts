@@ -12,4 +12,7 @@ export class TaskCreateComponent implements OnInit {
   ngOnInit() {
   }
 
+  onAddTask() {
+    alert('Task Added!');
+  }
 }
