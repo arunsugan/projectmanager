@@ -1,5 +1,5 @@
 export class task {
-    id: number;
+    taskId: number;
     project: string;
     task: string;
     priority: number;

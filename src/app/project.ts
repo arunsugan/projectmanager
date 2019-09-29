@@ -1,5 +1,6 @@
 export class project {
-    project: number;
+    projectId: string;
+    project: string;
     startEndDate: boolean;
     startDate: string;
     endDate: string;

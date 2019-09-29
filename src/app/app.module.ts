@@ -12,6 +12,7 @@ import { TaskDetailComponent } from './components/task-detail/task-detail.compon
 import { ProjectCreateComponent } from './components/project-create/project-create.component';
 import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
 import { ProjectViewComponent } from './components/project-view/project-view.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ProjectViewComponent } from './components/project-view/project-view.com
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

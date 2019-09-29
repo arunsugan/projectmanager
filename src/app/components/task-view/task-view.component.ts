@@ -1,4 +1,9 @@
+
 import { Component, OnInit } from '@angular/core';
+import { project } from '../../project';
+import { task } from '../../task';
+import { TaskService } from '../../service/task.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-task-view',
@@ -7,9 +12,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskViewComponent implements OnInit {
 
-  constructor() { }
+  Tasks: any;
+  SortKey: string;
+
+  constructor(private taskService: TaskService) { 
+    this.getTasks();
+    alert("Constructor");
+  }
 
   ngOnInit() {
   }
 
+  getTasks() {
+    this.taskService.getTasks()
+      .subscribe(response => {
+        this.Tasks = response;
+        console.log('Response: ' + response);
+      });
+  }
 }
