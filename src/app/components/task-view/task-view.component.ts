@@ -17,7 +17,6 @@ export class TaskViewComponent implements OnInit {
 
   constructor(private taskService: TaskService) { 
     this.getTasks();
-    alert("Constructor");
   }
 
   ngOnInit() {
